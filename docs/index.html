@@ -4,33 +4,24 @@
   <meta charset="utf-8">
   <meta name="description"
         content="LNEM (Lunar Neural Elevation Model) &amp; Lunar Studio.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="keywords" content="LNEM, Lunar Neural Elevation Model, NeRF, DEM, Lunar Studio, LROC NAC, KPLO LUTI">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LNEM: Lunar Neural Elevation Model</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -53,30 +44,21 @@
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="https://viewlab-group.github.io/LNEM">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+        <span class="icon"><i class="fas fa-home"></i></span>
       </a>
-
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
+        <a class="navbar-link">More Research</a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://view.kentech.ac.kr">
-            Viewlab
-          </a>
-          <a class="navbar-item" href="https://viewlab-group.github.io">
-            Lunar Studio
-          </a>
+          <a class="navbar-item" href="https://view.kentech.ac.kr">Viewlab</a>
+          <a class="navbar-item" href="https://viewlab-group.github.io">Lunar Studio</a>
         </div>
       </div>
     </div>
-
   </div>
 </nav>
 
 
+<!-- Hero / Title -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -84,90 +66,47 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">LNEM: Lunar Neural Elevation Model</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://view.kentech.ac.kr">Suwan Lee</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://view.kentech.ac.kr">Jo Ryeong Yim</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://view.kentech.ac.kr">Kibaek Park</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://view.kentech.ac.kr">Dong Gyu Kim</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://view.kentech.ac.kr">Eunhyeuk Kim</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://view.kentech.ac.kr">Minsup Jeong</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://view.kentech.ac.kr">Chae Kyung Sim</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://view.kentech.ac.kr">Seokju Lee</a><sup>1†</sup>
-            </span>
+            <span class="author-block"><a href="https://view.kentech.ac.kr">Suwan Lee</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://view.kentech.ac.kr">Jo Ryeong Yim</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://view.kentech.ac.kr">Kibaek Park</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://view.kentech.ac.kr">Dong Gyu Kim</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://view.kentech.ac.kr">Eunhyeuk Kim</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://view.kentech.ac.kr">Minsup Jeong</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="https://view.kentech.ac.kr">Chae Kyung Sim</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="https://view.kentech.ac.kr">Seokju Lee</a><sup>1†</sup></span>
           </div>
-
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>KENTECH,</span>
             <span class="author-block"><sup>2</sup>KARI,</span>
             <span class="author-block"><sup>3</sup>KASI</span>
           </div>
-
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
+                <a href="https://arxiv.org/pdf/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
+                <a href="https://arxiv.org/abs/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+                <a href="https://github.com/google/nerfies" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
+                <a href="https://github.com/google/nerfies/releases/tag/0.1" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="far fa-images"></i></span>
                   <span>Data</span>
-                  </a>
+                </a>
+              </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -175,255 +114,503 @@
   </div>
 </section>
 
+<!-- Teaser -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img src="./static/images/fig_teaser.png"
+           alt="Lunar Studio Benchmark and representative LNEM reconstructions."
+           style="width: 100%; height: auto;">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">LNEM</span> reconstructs 3D lunar terrain.
+        <span class="dnerf">LNEM</span> reconstructs 3D lunar terrain from multi-orbit pushbroom imagery
+        with rigorous sensor modeling and shadow-aware volumetric rendering.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
+<!-- TL;DR + Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- TL;DR -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TL;DR</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce <strong>LNEM</strong>, the first volumetric neural rendering framework for lunar DEM
+            reconstruction that integrates Rigorous Sensor Models (RSMs) for pushbroom imagery, and
+            <strong>Lunar Studio</strong>, a standardized multi-orbit dataset and pipeline built on LROC NAC
+            and KPLO LUTI observations. By explicitly modeling per-line camera poses, multi-resolution hash
+            encoding, and shadow-aware illumination, LNEM achieves <strong>high-fidelity reconstruction</strong>
+            across diverse lunar terrain — outperforming neural baselines and complementing traditional DEM pipelines.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+    <!--/ TL;DR -->
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
+    <!-- Abstract -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            TBA.
+            High-resolution and high-precision digital elevation models (DEMs) of the lunar surface are essential
+            for landing site selection and geological research. However, traditional stereo matching provides a
+            limited representation of the 3D scene, struggling with non-textured regions and extreme illumination
+            variations. Recent lunar neural rendering methods are also ill-suited for 3D reconstruction due to their
+            reliance on simple pinhole approximations for pushbroom sensors. These challenges are further compounded
+            by geometric misalignment, distributional bias, and labor-intensive handcrafted preprocessing in
+            satellite image pipelines.
           </p>
           <p>
-            TBA.
+            To address these issues, we introduce the <strong>Lunar Neural Elevation Model (LNEM)</strong>, a
+            volumetric reconstruction method that explicitly incorporates the pushbroom imaging process. A core
+            component of our approach is <strong>Lunar Studio</strong>, a multi-orbit dataset and pipeline
+            constructed using Rigorous Sensor Models (RSMs) to produce geometrically consistent observations
+            from the Lunar Reconnaissance Orbiter Camera (LROC) Narrow Angle Camera (NAC) and the Korea
+            Pathfinder Lunar Orbiter (KPLO) Lunar Terrain Imager (LUTI). LNEM integrates this pushbroom camera
+            formulation with learned shadow modeling, enabling geometrically grounded and illumination-aware
+            volumetric rendering under challenging lunar lighting conditions.
           </p>
           <p>
-            TBA.
+            Extensive experiments demonstrate that LNEM achieves geometrically consistent reconstruction across
+            multiple sensors under diverse viewing and illumination conditions, providing a scalable complement to
+            conventional DEM pipelines. To support reproducibility and future lunar research, we release
+            Lunar Studio, the multi-orbit dataset, and the LNEM reconstruction pipeline.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+    <!--/ Abstract -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src=""
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
 
+<!-- Lunar Studio + Method + Results + Supplementary -->
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">LNEM</h2>
-          <p>
-            TBA.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">LNEM</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              TBA.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
+    <!-- Result (DEM Visualization) -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">LNEM</h2>
+        <h2 class="title is-3">DEM Visualization</h2>
 
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Visualization</h3>
-        <div class="content has-text-justified">
-          <p>
-            TBA.
-          </p>
+        <div class="table-container">
+          <table class="table is-bordered is-fullwidth has-text-centered result-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>LNEM</th>
+                <th>SLDEM</th>
+                <th>NACDTM</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Apollo<br>15</th>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/apollo15_lnem.mp4"></video></td>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/apollo15_sldem.mp4"></video></td>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/apollo15_nacdtm.mp4"></video></td>
+              </tr>
+              <tr>
+                <th>Apollo<br>17</th>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/apollo17_lnem.mp4"></video></td>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/apollo17_sldem.mp4"></video></td>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/apollo17_nacdtm.mp4"></video></td>
+              </tr>
+              <tr>
+                <th>Lacus</th>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/lacus_lnem.mp4"></video></td>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/lacus_sldem.mp4"></video></td>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/lacus_nacdtm.mp4"></video></td>
+              </tr>
+              <tr>
+                <th>Tycho<br>(LUTI)</th>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/tycho_lnem.mp4"></video></td>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/tycho_sldem.mp4"></video></td>
+                <td><video class="dem-video" autoplay muted loop playsinline preload="metadata" style="width:100%;display:block;" src="./static/videos/tycho_nacdtm.mp4"></video></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">LNEM</h3>
-        <div class="content has-text-justified">
-          <p>
-            TBA.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
     </div>
-    <!--/ Animation. -->
+    <!--/ Result (DEM Visualization) -->
 
+    <!-- Mouse-driven scrubbing for DEM clips -->
+    <script>
+    (function () {
+      const videos = document.querySelectorAll('.dem-video');
+      videos.forEach(v => {
+        v.style.cursor = 'ew-resize';
 
-    <!-- Concurrent Work. -->
+        v.addEventListener('mouseenter', () => { v.pause(); });
+        v.addEventListener('mouseleave', () => {
+          if (!v.dataset.userPaused && v.duration) v.play().catch(() => {});
+        });
+
+        v.addEventListener('mousemove', (e) => {
+          if (!v.duration || !isFinite(v.duration)) return;
+          const rect = v.getBoundingClientRect();
+          const ratio = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1);
+          v.currentTime = ratio * v.duration;
+        });
+
+        v.addEventListener('click', () => {
+          if (v.dataset.userPaused) {
+            delete v.dataset.userPaused;
+            v.play().catch(() => {});
+          } else {
+            v.dataset.userPaused = '1';
+            v.pause();
+          }
+        });
+      });
+    })();
+    </script>
+
+    <!-- Lunar Studio -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
+        <h2 class="title is-3">Lunar Studio</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Lunar Studio</strong> is an end-to-end data processing pipeline that integrates
+            fragmented ISIS3 and ASP workflows for systematic photometric and geometric preprocessing
+            of lunar multi-orbit datasets. It exports per-line camera rotations and depth products
+            for direct use in downstream neural rendering, and to our knowledge is the first dedicated
+            pipeline for lunar neural rendering that integrates rigorous sensor modeling.
+          </p>
+          <p>
+            The pipeline consists of three stages: (1) <strong>Image Processing</strong> — radiometric
+            correction, sensor echo removal, camera distortion removal, and photometric normalization,
+            (2) <strong>Bundle Adjustment</strong> — footprint initialization, control network generation,
+            and jigsaw bundle adjustment for cross-orbit alignment, and (3) <strong>Geometric Data
+            Processing</strong> — per-pixel ray origin/direction, transformation matrices, and
+            ground-truth camera depths via customized ISIS3 campt.
+          </p>
+        </div>
+        <img src="./static/images/fig_pipeline.png"
+             alt="Overview of Lunar Studio data processing pipeline."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure 2.</strong> Overview of Lunar Studio data processing pipeline. An end-to-end pipeline integrating photometric corrections and rigorous sensor modeling for multi-orbit image alignment, exporting per-line camera rotations and depth products for downstream neural rendering.
+        </p>
+      </div>
+    </div>
+    <!--/ Lunar Studio -->
+
+    <br>
+
+    <!-- Method -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            LNEM integrates three key design choices to address the challenges of lunar pushbroom
+            neural rendering: <strong>grayscale volume rendering</strong> for monochromatic imagery,
+            <strong>pushbroom ray computation</strong> with per-line camera poses from SPICE kernels,
+            and <strong>multi-resolution hash encoding</strong> (L=32 levels) for adaptive spatial
+            representation without site-specific tuning.
+          </p>
+          <p>
+            For shadow modeling, LNEM predicts per-sample sun visibility <em>v</em> and indirect
+            illumination <em>I</em><sub>ind</sub> as independent branches from the shared feature
+            vector, conditioned on the solar ray direction ω derived from per-line ephemeris time.
+            A shadow correction loss aligns solar-ray transmittance with predicted visibility,
+            enabling illumination-aware reconstruction under challenging lunar lighting conditions.
+          </p>
+        </div>
+        <img src="./static/images/fig_architecture.png"
+             alt="LNEM pipeline architecture."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure 3.</strong> LNEM pipeline. A pushbroom orbit sample is processed to output volume density and a 256-dimensional feature vector. The feature is combined with the sinusoidal-encoded view direction γ(<strong>d</strong>) to predict grayscale c<sub>g</sub>, and with the solar direction ω to predict sun visibility v, while I<sub>ind</sub> is predicted solely from ω. Hidden dimensions are 256 for the shared trunk and 128, 64, and 32 for the subsequent branches, each producing a scalar output.
+        </p>
+      </div>
+    </div>
+    <!--/ Method -->
+
+    <br>
+
+    <!-- Results -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <h3 class="title is-4">Qualitative Comparison</h3>
+        <div class="content has-text-justified">
+          <p>
+            LNEM reconstructs continuous and detailed elevation maps even where NAC DTM exhibits
+            data voids, such as pit interiors. Compared to SLDEM, NAC DTM, and neural baselines
+            (Sat-NeRF, EO-NeRF, ASP), LNEM produces geometrically consistent DEMs across diverse
+            terrain types including impact craters and pit structures.
+          </p>
+        </div>
+
+        <img src="./static/images/fig_cross.png"
+             alt="Qualitative and elevation comparison of SLDEM, NAC DTM, and LNEM at Tycho and Lacus Mortis Pit."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure 6.</strong> Qualitative and elevation comparison of SLDEM, NAC DTM, and LNEM, where LNEM is trained using NAC images as input. We compare DEMs from SLDEM, NAC DTM, and LNEM over (a) Tycho and (b) Lacus Mortis Pit using three-orbit inputs. LNEM reconstructs continuous and detailed elevation, even where NAC DTM exhibits voids. Elevation maps use a common colormap and range, and profiles along I-1 and I-2 are presented.
+        </p>
+
+        <br>
+
+        <img src="./static/images/fig_baseline.png"
+             alt="Baseline comparison on Lacus Mortis Pit."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure 7.</strong> Baseline comparison on Lacus Mortis Pit. (a) Input NAC image. (b) LNEM. (c) Sat-NeRF. (d) EO-NeRF. (e) ASP. Methods (b)–(d) are trained for 50,000 iterations, while (e) is a classical stereo pipeline. Methods (b) and (c) are depth-supervised and share the same supervision data and elevation range, whereas (d) and (e) use separate ranges due to larger offsets. EO-NeRF relies solely on photometric consistency without depth supervision, resulting in large global vertical offsets due to scale ambiguity, even reconstructing the pit crater as convex. ASP requires convergence-angle relaxation under small-baseline lunar conditions and produces only 6 valid LOLA match points due to triangulation failure over the pit interior.
+        </p>
+
+        <br>
+
+        <h3 class="title is-4">Geometric Consistency and Shadow Modeling</h3>
+        <div class="content has-text-justified">
+          <p>
+            To evaluate the impact of shadow modeling on cross-orbit consistency, we project predicted depth maps
+            from multiple viewpoints into the MOON ME frame and measure per-pixel spatial dispersion across orbits.
+            Shadow modeling improves σ<sup>2</sup><sub>total</sub> across all eight regions. The mean
+            σ<sup>2</sup><sub>total</sub> decreases from 3.1884 without shadow modeling to 2.2145 with shadow
+            modeling at the Apollo 15 site. Regions with the highest residual inconsistency coincide with shadow
+            boundaries, where large photometric variation across orbits makes multi-view depth estimation inherently
+            ambiguous. This spatial pattern confirms that σ<sup>2</sup><sub>total</sub> provides a physically
+            meaningful per-pixel uncertainty estimate without requiring additional network components.
+          </p>
+        </div>
+        <img src="./static/images/fig_stdmap.png"
+             alt="Geometric consistency map (Apollo 15)."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure 8.</strong> Geometric consistency (σ<sup>2</sup><sub>total</sub>) map (Apollo 15). Shadow modeling reduces multi-view inconsistency, yielding lower σ<sup>2</sup><sub>total</sub> values and cleaner deviation maps. The mean σ<sup>2</sup><sub>total</sub> decreases from 3.1884 without shadow modeling to 2.2145 with shadow modeling.
+        </p>
+
+        <br>
 
         <div class="content has-text-justified">
           <p>
-            TBA.
-          </p>
-          <p>
-            TBA.
-          </p>
-          <p>
-            TBA.
-          </p>
-          <p>
-            TBA.
-          </p>
-          <p>
-            TBA.
+            The predicted shadow map at the Eimmart A site illustrates the sun visibility learned by LNEM.
+            Areas with direct solar illumination appear brighter, while regions outside the shared footprint
+            of all orbits yield unreliable visibility estimates due to limited multi-view observations.
+            This behavior is consistent with the shadow model's tendency to overfit under sparse-view
+            conditions, such as 2-view configurations at Apollo 16 and Eimmart A.
           </p>
         </div>
+        <img src="./static/images/fig_shadow.png"
+             alt="Shadow map prediction (Eimmart A)."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure 10.</strong> Shadow map prediction (Eimmart A). Brighter regions indicate areas directly illuminated by the Sun, while non-overlapping regions exhibit unreliable estimates due to insufficient multi-view coverage.
+        </p>
+
+        <br>
+
+        <h3 class="title is-4">Quantitative Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            After bias correction, LNEM achieves RMSE<sub>corr</sub> of 0.67 to 5.67 m across all
+            eight NAC regions, consistently outperforming neural baselines. Sites with three input
+            views achieve 0.67 to 3.69 m accuracy. Two-view sites such as Apollo 16 and Eimmart A
+            show elevated errors of 4.10 to 5.67 m. The high raw RMSE<sub>LOLA</sub> values in
+            several regions mainly arise from global vertical offsets, as reflected by the gap between
+            RMSE<sub>LOLA</sub> and RMSE<sub>corr</sub>.
+          </p>
+        </div>
+
+        <div class="table-container">
+          <table class="table is-bordered is-fullwidth has-text-centered" style="font-size: 0.85em;">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Apollo 15</th>
+                <th>Apollo 16</th>
+                <th>Apollo 17</th>
+                <th>Eimmart A</th>
+                <th>Tycho</th>
+                <th>V. Schröteri</th>
+                <th>Lacus Mortis Pit</th>
+                <th>Marius Hills Pit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: #e8e8e8;">
+                <td colspan="9" class="has-text-left"><strong>RMSE<sub>LOLA</sub> (m) ↓</strong></td>
+              </tr>
+              <tr>
+                <td class="has-text-left">SLDEM*</td>
+                <td>2.115</td><td>1.366</td><td>1.893</td><td>2.842</td><td>3.476</td><td>5.096</td><td>2.487</td><td>0.922</td>
+              </tr>
+              <tr>
+                <td class="has-text-left">NAC DTM*</td>
+                <td>1.918</td><td>0.616</td><td>0.954</td><td>3.586</td><td>1.551</td><td>3.698</td><td>4.865</td><td>0.823</td>
+              </tr>
+              <tr>
+                <td class="has-text-left">LNEM (w/o SM)</td>
+                <td>10.602</td><td>1.970</td><td>8.264</td><td>10.995</td><td>3.886</td><td>10.904</td><td>11.214</td><td>1.530</td>
+              </tr>
+              <tr>
+                <td class="has-text-left">LNEM (w/ SM)</td>
+                <td>8.602</td><td>4.630</td><td>7.318</td><td>10.686</td><td>2.117</td><td>4.248</td><td>10.228</td><td>0.676</td>
+              </tr>
+              <tr style="background-color: #e8e8e8;">
+                <td colspan="9" class="has-text-left"><strong>RMSE<sub>corr</sub> (m) ↓</strong></td>
+              </tr>
+              <tr>
+                <td class="has-text-left">ASP</td>
+                <td>3.103</td><td>0.324</td><td>1.986</td><td>2.283</td><td>0.672</td><td>15.083</td><td>109.961</td><td>1.891</td>
+              </tr>
+              <tr>
+                <td class="has-text-left">EO-NeRF</td>
+                <td>58.386</td><td>7.341</td><td>29.824</td><td>97.719</td><td>46.951</td><td>22.826</td><td>62.296</td><td>38.243</td>
+              </tr>
+              <tr>
+                <td class="has-text-left">Sat-NeRF</td>
+                <td>39.196</td><td>15.956</td><td>24.169</td><td>38.917</td><td>11.207</td><td>19.137</td><td>8.734</td><td>6.209</td>
+              </tr>
+              <tr style="background-color: #f0f4ff;">
+                <td class="has-text-left">LNEM (w/ SM)</td>
+                <td>1.565</td><td>4.096</td><td>1.228</td><td>5.674</td><td>0.979</td><td>3.689</td><td>2.025</td><td>0.673</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="has-text-justified" style="font-size: 0.85em;">
+          <strong>Table 5.</strong> Elevation error (m) against LOLA across eight LROC NAC regions. SLDEM and NAC DTM are production-level DEMs*. Bias-corrected metrics (RMSE<sub>corr</sub>) are reported for all other methods using 2 to 3 orbits per site. EO-NeRF and Sat-NeRF use RPC models from ASP's cam2rpc on identical Lunar Studio data. SM denotes shadow modeling.
+          <br>
+          <em>*SLDEM co-registers 43,200 TC tiles via two-step ICP with GRAIL-based refinement. NAC DTM uses up to 9 stereo pairs aligned to LOLA via geomorphic feature matching.</em>
+        </p>
+
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+    <!--/ Results -->
+
+    <br>
+
+    <!-- Additional Analysis -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Additional Analysis</h2>
+
+        <h3 class="title is-4">Elevation Profile Comparison</h3>
+        <div class="content has-text-justified">
+          <p>
+            We compare DEMs generated by LNEM with SLDEM and NAC DTM across three sites: Apollo 15
+            (NAC 2-view), Apollo 17 (NAC 3-view), and Tycho (LUTI 2-view). LNEM closely follows the
+            global elevation trends of both baselines. In the I-1 profiles of the Apollo 15 and Tycho
+            regions, LNEM additionally recovers geometric details that are over-smoothed in SLDEM and
+            NAC DTM. For the Tycho region, LNEM additionally recovers geometric details in the I-2
+            direction where NAC DTM exhibits a data void.
+          </p>
+        </div>
+        <img src="./static/images/fig_cross_section_supp.png"
+             alt="Qualitative and cross-section elevation comparisons of SLDEM, NAC DTM, and LNEM."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure A3.</strong> Qualitative and cross-section elevation comparisons of SLDEM, NAC DTM, and LNEM across Apollo 15, Apollo 17, and Tycho. Elevation maps use a common colormap and range, and profiles along I-1 and I-2 are presented, following the same procedure as Figure 6 in the main paper. LNEM closely follows global elevation trends and additionally recovers fine geometric details over-smoothed in the baselines. For the Tycho I-2 direction, a data void in NAC DTM is visible, while LNEM reconstructs continuous elevation.
+        </p>
+
+        <br>
+
+        <h3 class="title is-4">LOLA Error Convergence</h3>
+        <div class="content has-text-justified">
+          <p>
+            The convergence behavior of the LOLA mean error is computed as the average absolute elevation
+            difference between the reconstructed DEM and LOLA measurements at matched locations.
+            During early training, LNEM with shadow modeling exhibits a temporary increase in LOLA error,
+            indicating that the model first prioritizes learning geometric structure through multi-view
+            photometric consistency rather than fitting the depth prior. After this initial phase,
+            the error decreases steadily as the shadow-aware model converges to a geometrically
+            consistent reconstruction.
+          </p>
+        </div>
+        <img src="./static/images/fig_lola_mean_error_supp.png"
+             alt="Convergence behavior of LOLA mean error."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure A4.</strong> Convergence behavior of LOLA mean error. The right panel shows 22 LOLA measurement points (red dots) at the Apollo 15 site in M183504057L. The left plot illustrates the evolution of the mean error over training iterations. The initial increase in LOLA error for LNEM with shadow modeling indicates that the model first prioritizes learning geometric structure through multi-view photometric consistency rather than fitting the depth prior.
+        </p>
+
+        <br>
+
+        <h3 class="title is-4">Depth Supervision Sensitivity</h3>
+        <div class="content has-text-justified">
+          <p>
+            We vary the percentage of rays receiving depth supervision on Apollo 17, from 10% to 100%.
+            All ratios produce visually comparable reconstructions with no systematic degradation.
+            RMSE<sub>corr</sub> shows no monotonic trend across supervision ratios, with the best
+            performance achieved at 30% (RMSE<sub>corr</sub> = 1.614 m). This confirms that LNEM
+            learns geometry primarily through multi-view photometric consistency rather than memorizing
+            the supervising DEM.
+          </p>
+        </div>
+        <img src="./static/images/supp_depth_precentage_rmse.png"
+             alt="Full depth supervision sensitivity results (Apollo 17)."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure A5.</strong> Full depth supervision sensitivity results (Apollo 17). Qualitative DEM reconstructions are shown for supervision ratios from 10% to 100%. The input NAC image (M104318871R) is shown in the top-left panel. All ratios produce visually comparable reconstructions with no systematic degradation, and RMSE<sub>corr</sub> shows no monotonic trend, confirming that LNEM learns geometry primarily through multi-view photometric consistency.
+        </p>
+
+        <br>
+
+        <h3 class="title is-4">Adaptive Hash Encoding vs. Fourier Feature Mapping</h3>
+        <div class="content has-text-justified">
+          <p>
+            We compare LNEM's multi-resolution hash encoding against fixed Fourier feature mapping across
+            different frequency hyperparameters M at the Apollo 17 site. The Fourier-based baseline fails
+            to disentangle texture from geometry due to its fixed frequency basis. This limitation arises
+            from a fundamental representational deficit rather than insufficient training — even when
+            extending training to 8×10<sup>5</sup> iterations, the baseline yields negligible improvement
+            in recovering fine geometric details. In contrast, LNEM reconstructs high-frequency geometric
+            and photometric structures within 50,000 iterations, achieving superior data efficiency and
+            robustness without frequency tuning. LNEM achieves PSNR of 48.39 dB at Apollo 17, compared
+            to the best sinusoidal baseline of 33.38 dB.
+          </p>
+        </div>
+        <img src="./static/images/fig_encoding_supp.png"
+             alt="Qualitative results of LNEM and Fourier feature mapping."
+             style="width: 100%; height: auto;">
+        <p class="has-text-justified" style="margin-top: 0.5rem;">
+          <strong>Figure A6.</strong> Qualitative results of LNEM and Fourier feature mapping at Apollo 17 (M104318871R). All results are shown at 50k iterations with identical hyperparameters, varying only the positional encoding scheme. LNEM (adaptive hash encoding) achieves PSNR of 48.39 dB, substantially outperforming all sinusoidal baselines regardless of M. The sinusoidal baseline requires site-specific tuning of M and fails to generalize across scenes with different geometric complexity.
+        </p>
+
+      </div>
+    </div>
+    <!--/ Additional Analysis -->
 
   </div>
 </section>
 
-
+<!-- Acknowledgement -->
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    <p>
+      This research was supported by the Korea Astronomy and Space Science Institute under the R&amp;D
+      program (Project No. 2025-1-850-07) supervised by the Ministry of Science and ICT. This research
+      was also supported by the Basic Science Research Program through the National Research Foundation
+      of Korea (NRF) funded by the Ministry of Education (No. RS-2024-00463470).
+    </p>
+  </div>
+</section>
+<!--/ Acknowledgement -->
+  
+<!-- BibTeX -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{lee2026lnem,
-  author    = {...},
-  title     = {LNEM: Lunar Neural Elevation Model},
-  journal   = {CVPR},
-  year      = {2026},
-}</code></pre>
+    <pre><code>@inproceedings{lee2026lnem,
+      author    = {Lee, Suwan and Yim, Jo Ryeong and Park, Kibaek and Kim, Dong-Gyu and Kim, Eunhyeuk and Jeong, Minsup and Sim, Chae Kyung and Lee, Seokju},
+      title     = {LNEM: Lunar Neural Elevation Model},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      year      = {2026},
+    }</code></pre>
   </div>
 </section>
 
@@ -431,11 +618,7 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/viewlab-group/LNEM" class="external-link">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -444,15 +627,13 @@
         <div class="content">
           <p>
             This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
             This means you are free to borrow the <a
               href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
             we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
